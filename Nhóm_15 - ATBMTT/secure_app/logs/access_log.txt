@@ -1,0 +1,4 @@
+def log_action(username, action, detail):
+    log = Log(username=username, action=action, detail=detail)
+    db.session.add(log)
+    db.session.commit()

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký</title>  <!-- Tiêu đề trang -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #121212; /* Màu nền đen */
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #ffffff; /* Màu chữ sáng */
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.1); /* Khung trong suốt */
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            max-width: 350px; /* Khung nhỏ hơn */
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #ff4081; /* Màu chữ nổi bật */
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #ffffff; /* Màu chữ cho label */
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ff4081; /* Đường viền màu nổi bật */
+            border-radius: 5px;
+            margin-bottom: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            color: #ffffff; /* Màu chữ trong input */
+        }
+
+        input[type="text"]::placeholder, input[type="password"]::placeholder {
+            color: #cccccc; /* Màu chữ placeholder */
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: #ff4081; /* Màu nền nút */
+            color: #ffffff; /* Màu chữ nút */
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #e91e63; /* Màu nền khi hover */
+        }
+
+        .link {
+            display: block;
+            margin-top: 10px;
+            text-align: center;
+            color: #ff4081; /* Màu chữ cho liên kết */
+            text-decoration: none;
+        }
+
+        .link:hover {
+            text-decoration: underline; /* Gạch chân khi hover */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Đăng Ký</h1> <!-- Thêm tiêu đề cho phần đăng ký -->
+    <form method="POST" action="/register">
+        <input type="text" name="name" placeholder="Họ và tên" required>
+        <input type="text" name="cmnd" placeholder="CMND" required>
+        <input type="text" name="baohiem" placeholder="Bảo hiểm" required>
+        <input type="text" name="stk" placeholder="Số tài khoản" required>
+        <input type="text" name="diachi" placeholder="Địa chỉ" required>
+        <input type="text" name="username" placeholder="Tên đăng nhập" required>
+        <input type="password" name="password" placeholder="Mật khẩu" required>
+        <button type="submit">Đăng ký</button>
+    </form>
+    <a href="/login" class="link">Đã có tài khoản? Đăng nhập</a>
+</div>
+
+</body>
+</html>

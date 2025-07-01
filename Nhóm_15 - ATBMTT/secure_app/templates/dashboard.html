@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng Điều Khiển</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #121212; /* Màu nền đen */
+            font-family: 'Roboto', sans-serif;
+            color: #ffffff; /* Màu chữ sáng */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.1); /* Khung trong suốt */
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            max-width: 400px; /* Khung nhỏ hơn */
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #ff4081; /* Màu chữ nổi bật */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ff4081; /* Đường viền màu nổi bật */
+            border-radius: 5px;
+            margin-bottom: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            color: #ffffff; /* Màu chữ trong input */
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: #ff4081; /* Màu nền nút */
+            color: #ffffff; /* Màu chữ nút */
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #e91e63; /* Màu nền khi hover */
+        }
+
+        .logout-button {
+            display: block;
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            background: #f44336; /* Màu nền nút đăng xuất */
+            color: #ffffff; /* Màu chữ nút đăng xuất */
+            text-decoration: none; /* Bỏ gạch chân */
+            text-align: center; /* Canh giữa */
+        }
+
+        .logout-button:hover {
+            background: #d32f2f; /* Màu nền khi hover */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Thông tin cá nhân</h1>
+    <p>Họ tên: {{ user.name }}</p>
+    <p>CMND: {{ user.cmnd if show_sensitive else '****' }}</p>
+    <p>Bảo hiểm xã hội: {{ user.baohiem if show_sensitive else '****' }}</p>
+    <p>Số tài khoản: {{ user.stk if show_sensitive else '****' }}</p>
+    <p>Địa chỉ: {{ user.diachi if show_sensitive else '****' }}</p>
+    
+    <form method="POST" action="/dashboard">
+        <label for="password">Nhập mật khẩu để xem thông tin này:</label>
+        <input type="password" name="password" placeholder="Nhập mật khẩu" required>
+        <button type="submit">Xác thực</button>
+    </form>
+
+    <a href="/logout" class="logout-button">Đăng xuất</a>
+</div>
+
+</body>
+</html>

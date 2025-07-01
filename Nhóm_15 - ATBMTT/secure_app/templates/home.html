@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ứng Dụng Bảo Mật</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #121212; /* Màu nền đen */
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #ffffff; /* Màu chữ sáng */
+            text-align: center;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.1); /* Khung trong suốt */
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #ff4081; /* Màu chữ nổi bật */
+        }
+
+        a {
+            display: inline-block;
+            text-decoration: none;
+            color: #ff4081; /* Màu chữ nổi bật cho liên kết */
+            font-weight: bold;
+            padding: 10px 20px;
+            border: 2px solid #ff4081; /* Đường viền màu nổi bật */
+            border-radius: 30px;
+            transition: background 0.3s, color 0.3s;
+            margin: 10px;
+        }
+
+        a:hover {
+            background: #ff4081; /* Màu nền khi hover */
+            color: #ffffff; /* Màu chữ trắng khi hover */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Chào mừng đến ứng dụng bảo mật</h1>
+    <a href="/login">Đăng nhập</a>
+    <a href="/register">Đăng ký</a>
+</div>
+
+</body>
+</html>
