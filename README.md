@@ -1,7 +1,7 @@
 # BTL_ATBMTT
-hình ảnh giao diện chính
+hình ảnh giao diện chính:![image](https://github.com/user-attachments/assets/e06f4980-9e24-40a6-8c10-3cba9fd3b95e)
 
-![image](https://github.com/user-attachments/assets/e06f4980-9e24-40a6-8c10-3cba9fd3b95e)
+
 giao diện đăng nhập: 
 
 ![image](https://github.com/user-attachments/assets/2834384e-d9de-4013-abc3-71d7f5e3d55c)
